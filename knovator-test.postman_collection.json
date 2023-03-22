@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "2a7e69dd-d4d7-4351-8b78-3061880fe8eb",
+		"name": "konvotor-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23222731"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Paresh\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Paresh\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "createPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFiM2YxNWMxOGM1YmViYjE4N2Q0ZDMiLCJ1c2VybmFtZSI6IlBhcmVzaCIsImlhdCI6MTY3OTUwNzQ4OX0.WaUhjJzp4AX8D8S6K30DwhcJ_QRsuBfR4Hcq7UWYjYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"641b3f15c18c5bebb187d4d3\",\r\n    \"title\": \"Seventh title..\",\r\n    \"body\": \"Seventh body........................\",\r\n    \"location\": {\r\n        \"coordinates\": [\r\n            72.916882,\r\n            21.239675\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/post/createPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"createPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFiMTRiMTliYjIwODAzZWM0YTBhOTMiLCJ1c2VybmFtZSI6InJhaiIsImlhdCI6MTY3OTUwNzQwNn0._cNIemlDhkHDi1MTZ89Ux-mdavxFJo7VcMhl4kh_y8Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/post/deletePost/641b403ec18c5bebb187d4ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"deletePost",
+								"641b403ec18c5bebb187d4ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFiMTRiMTliYjIwODAzZWM0YTBhOTMiLCJ1c2VybmFtZSI6InJhaiIsImlhdCI6MTY3OTUwMDk4M30.-xZES7l9Tsd4bHJrsMGAyIDdQzWd9stTvxkQ-Ej33j4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"641b4003c18c5bebb187d4ea\",\r\n    \"isActive\": false,\r\n    \"title\":\"Sixth title.. change..\",\r\n    \"body\":\"Sixth body........... change..\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/post/updatePost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"updatePost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activeInactiveCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFiMTRiMTliYjIwODAzZWM0YTBhOTMiLCJ1c2VybmFtZSI6InJhaiIsImlhdCI6MTY3OTUwMDk4M30.-xZES7l9Tsd4bHJrsMGAyIDdQzWd9stTvxkQ-Ej33j4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/post/activeInactiveCount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"activeInactiveCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostByCoord",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFiMTRiMTliYjIwODAzZWM0YTBhOTMiLCJ1c2VybmFtZSI6InJhaiIsImlhdCI6MTY3OTUwMDk4M30.-xZES7l9Tsd4bHJrsMGAyIDdQzWd9stTvxkQ-Ej33j4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/post/getPostByCoords/21.245442/72.911854",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"post",
+								"getPostByCoords",
+								"21.245442",
+								"72.911854"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
